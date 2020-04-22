@@ -8,7 +8,7 @@ class Export {
   constructor (options) {
     this._el = options.el || null; // 挂载点
     this._data = options.data || {};
-    if (!this._el && !this._data) {
+    if (!this._el && Object.keys(this._data).length === 0) {
       return console.log('data sources must be identified!');
     }
     if (this._el && !this._el.__proto__.constructor === HTMLTableElement) {
@@ -19,7 +19,7 @@ class Export {
     }
   }
   export () {
-    initData(this._el);
+    initData(this);
   }
 }
 
