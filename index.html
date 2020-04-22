@@ -1,0 +1,49 @@
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	</head>
+	<body>
+		<div class="table">
+			<table>
+				<thead>
+					<tr>
+						<th>创始人</th>
+						<th>公司名称</th>
+						<th>创建时间</th>
+						<th>创建地点</th>
+						<th>创建资金</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>马云</td>
+						<td>阿里巴巴</td>
+						<td>2017-10-01</td>
+						<td>杭州</td>
+						<td>210512451万</td>
+					</tr>
+					<tr>
+						<td>11</td>
+						<td>22</td>
+						<td>333</td>
+						<td>444</td>
+						<td>555</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<input type="button" id="excel" value="导出" />
+  </body>
+  <script src="./dist/js/index.js"></script>
+  <script>
+    var el = document.getElementsByTagName('table')[0];
+    var m = new Export({
+      el
+    });
+    document.getElementById('excel').onclick = function () {
+      m.export();
+    }
+  </script>
+  <!-- <script src="./lib/index.js"></script> -->
+</html>
