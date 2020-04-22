@@ -6,20 +6,20 @@ import {initData} from './lib/init/index';
 
 class Export {
   constructor (options) {
-    this.el = options.el || null; // 挂载点
-    this.data = options.data || {};
-    if (!this.el && !this.data) {
+    this._el = options.el || null; // 挂载点
+    this._data = options.data || {};
+    if (!this._el && !this._data) {
       return console.log('data sources must be identified!');
     }
-    if (this.el && !this.el.__proto__.constructor === HTMLTableElement) {
+    if (this._el && !this._el.__proto__.constructor === HTMLTableElement) {
       return console.log('el must be an HTMLTableElement!');
     }
-    if (this.data && !this.data.__proto__.constructor === Object) {
+    if (this._data && !this._data.__proto__.constructor === Object) {
       return console.log('data must be a Object!');
     }
   }
   export () {
-    initData(this.el);
+    initData(this._el);
   }
 }
 
