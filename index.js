@@ -5,7 +5,9 @@ import {initData} from './lib/init/index';
  */
 
 class Export {
-  constructor (options) {
+  constructor () {}
+  export (options) {
+    this._filename = this._filename = options.filename || 'report';
     this._el = options.el || null; // 挂载点
     this._data = options.data || {};
     if (!this._el && Object.keys(this._data).length === 0) {
@@ -17,8 +19,6 @@ class Export {
     if (this._data && !this._data.__proto__.constructor === Object) {
       return console.log('data must be a Object!');
     }
-  }
-  export () {
     initData(this);
   }
 }

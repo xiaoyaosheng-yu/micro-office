@@ -38,11 +38,12 @@
   <script src="./dist/js/index.js"></script>
   <script>
     var el = document.getElementsByTagName('table')[0];
-    var m = new Export({
-      el
-    });
+    var m = new Export();
     document.getElementById('excel').onclick = function () {
-      m.export();
+      m.export({
+				el,
+				filename: '测试'
+			});
     }
   </script>
   <!-- <script src="./lib/index.js"></script> -->
