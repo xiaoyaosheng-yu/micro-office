@@ -1,6 +1,6 @@
 {
   "name": "micro-office",
-  "version": "1.0.7",
+  "version": "1.0.10",
   "description": "a micro office store",
   "main": "index.js",
   "scripts": {
