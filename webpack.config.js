@@ -6,7 +6,7 @@ module.exports = {
 		index: './index.js'
 	},
 	output: {
-		filename: 'js/[name].js',
+		filename: 'js/micro-office.js',
 		path: path.resolve(__dirname, 'dist')
 	},
 	module: {

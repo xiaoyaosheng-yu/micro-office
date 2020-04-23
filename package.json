@@ -1,13 +1,13 @@
 {
-  "name": "export",
-  "version": "1.0.0",
-  "description": "",
+  "name": "micro-office",
+  "version": "1.0.7",
+  "description": "a micro office store",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"
   },
-  "author": "",
+  "author": "xiaoyaosheng-yu",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.9.0",

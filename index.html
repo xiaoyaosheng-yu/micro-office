@@ -38,9 +38,9 @@
   <script src="./dist/js/index.js"></script>
   <script>
     var el = document.getElementsByTagName('table')[0];
-    var m = new Export();
+    var microOffice= new MicroOffice();
     document.getElementById('excel').onclick = function () {
-      m.export({
+      microOffice.export({
 				el,
 				filename: '测试'
 			});
