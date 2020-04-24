@@ -1,4 +1,5 @@
 import {initData} from './lib/init/index';
+import XLSX from 'xlsx';
 /**
  * Export
  * @param {*} options
@@ -20,6 +21,20 @@ export class MicroOffice {
       return console.error('data must be a Object!');
     }
     initData(this);
+  }
+  read (file) {
+    const reader = new FileReader()
+    // reader.readAsDataURL(file);
+    reader.readAsDataURL(file);
+    reader.onload = function(e) {
+      var data = e.target.result;
+      var wb = XLSX.read(data, {
+        type: 'binary'
+      });
+      
+      let jsonData = XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]]);
+      console.log(data);
+    }
   }
 }
 
